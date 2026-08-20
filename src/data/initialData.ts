@@ -20,6 +20,8 @@ export const INITIAL_SCHOOL_SETTINGS: SchoolSettings = {
   enableFaceRecognitionValidation: true,
   encryptionActive: true,
   resetDisplayDurationMs: 1000, // 1 detik auto-reset
+  adminUsername: 'admin',
+  adminPassword: 'admin123',
 };
 
 export const INITIAL_STUDENTS: Student[] = [

@@ -91,6 +91,8 @@ export interface SchoolSettings {
   enableFaceRecognitionValidation: boolean;
   encryptionActive: boolean;
   resetDisplayDurationMs: number; // 1000ms as requested
+  adminUsername?: string; // Default: 'admin'
+  adminPassword?: string; // Default: 'admin123'
 }
 
 export interface CaptchaData {
@@ -110,5 +112,4 @@ export type AdminTab =
   | 'leave_system'
   | 'notifications'
   | 'analytics'
-  | 'security'
-  | 'settings';
+  | 'security';

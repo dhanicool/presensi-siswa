@@ -88,9 +88,13 @@ export const AdminLogin: React.FC = () => {
       return;
     }
 
-    // Validate Credentials
-    if (!username.trim() || !password.trim()) {
-      setErrorMsg('Username dan Password wajib diisi.');
+    // Validate Credentials against system settings
+    const validUsername = (settings.adminUsername || 'admin').trim();
+    const validPassword = (settings.adminPassword || 'admin123').trim();
+
+    if (username.trim() !== validUsername || password.trim() !== validPassword) {
+      setErrorMsg('Username atau Password salah. Silakan periksa kembali kredensial Anda.');
+      refreshCaptcha();
       setIsSubmitting(false);
       return;
     }
