@@ -1,0 +1,6 @@
+{
+  "name": "SiPresensi Pintar QR & Face",
+  "description": "Aplikasi presensi siswa berbasis QR code dan deteksi wajah dengan dashboard admin terpadu, notifikasi orang tua otomatis, ekspor rekap PDF/Excel, dan sistem perizinan.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

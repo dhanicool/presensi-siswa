@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // School Attendance System Rules
+    match /students/{studentId} {
+      allow read, write: if true;
+    }
+    
+    match /attendance/{attendanceId} {
+      allow read, write: if true;
+    }
+    
+    match /leave_requests/{leaveId} {
+      allow read, write: if true;
+    }
+    
+    match /notifications/{notifId} {
+      allow read, write: if true;
+    }
+    
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+  }
+}
