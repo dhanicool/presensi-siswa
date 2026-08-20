@@ -16,6 +16,7 @@ const firebaseConfig = {
 
 const customDatabaseId = 
   metaEnv.VITE_FIREBASE_FIRESTORE_DATABASE_ID || 
+  metaEnv.VITE_FIREBASE_FIRESTORE_ID ||
   firebaseConfigJson.firestoreDatabaseId || 
   '(default)';
 

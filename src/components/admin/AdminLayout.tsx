@@ -33,6 +33,7 @@ import { LeaveManagement } from './LeaveManagement';
 import { ParentNotifications } from './ParentNotifications';
 import { AnalyticsDashboard } from './AnalyticsDashboard';
 import { SecuritySettings } from './SecuritySettings';
+import { SchoolSettingsView } from './SchoolSettingsView';
 import { CloudDeployGuideModal } from './CloudDeployGuideModal';
 import { Cloud } from 'lucide-react';
 
@@ -75,6 +76,7 @@ export const AdminLayout: React.FC = () => {
     { id: 'leave_system', label: 'Sistem Perizinan', icon: FileText, badge: pendingLeavesCount },
     { id: 'notifications', label: 'Notifikasi Ortu', icon: PhoneCall },
     { id: 'analytics', label: 'Analitik & Tren', icon: TrendingUp },
+    { id: 'settings', label: 'Pengaturan Sekolah', icon: School },
     { id: 'security', label: 'Keamanan & Sistem', icon: ShieldCheck },
   ];
 
@@ -96,8 +98,9 @@ export const AdminLayout: React.FC = () => {
         return <ParentNotifications />;
       case 'analytics':
         return <AnalyticsDashboard />;
-      case 'security':
       case 'settings':
+        return <SchoolSettingsView />;
+      case 'security':
         return <SecuritySettings />;
       default:
         return <DashboardOverview />;
